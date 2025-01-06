@@ -21,17 +21,20 @@ const Kontak = () => {
       try {
         setSedangMengirim(true);
         setTandaMengirim(".");
+        // Kirim formulir ke EmailJS
         await emailjs.sendForm(
-          "service_5qzuvdq",
-          "template_qkktvw9",
-          formulir.current,
-          "lo0wuhTTHf07Cfhm-"
+          "service_mssaa3g", // Ganti dengan Service ID kamu
+          "template_hdjmn08", // Ganti dengan Template ID kamu
+          formulir.current, // Formulir yang ingin dikirim
+          "LE4nxpzu046TvFJJo" // Public Key kamu
         );
+        // Tampilkan pesan sukses
         toast.success("Pesan berhasil terkirim!", {
           position: toast.POSITION ? toast.POSITION.TOP_CENTER : "top-center",
         });
-        e.target.reset();
+        e.target.reset(); // Reset formulir setelah pengiriman
       } catch (error) {
+        // Tampilkan pesan error jika pengiriman gagal
         toast.error("Oops! Terjadi kesalahan. Mohon coba lagi nanti.", {
           position: toast.POSITION ? toast.POSITION.TOP_CENTER : "top-center",
         });
@@ -105,7 +108,7 @@ const Kontak = () => {
                 sandroanugrahtambunan6@gmail.com
               </span>
               <a
-                href="mailto:fifanaufal10@gmail.com"
+                href="mailto:sandroanugrahtambunan6@gmail.com"
                 className="tombol__kontak"
               >
                 Tuliskan Pesan{" "}
