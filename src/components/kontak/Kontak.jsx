@@ -2,18 +2,23 @@
 import React, { useRef, useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 // LIBRARY EMAILJS
 import emailjs from "@emailjs/browser";
+
 // LIBRARY FRAMER MOTION
 import { motion } from "framer-motion";
-// LIBRARY SAYA
+
+// ANIMASI HALAMAN (CUSTOM FUNCTION)
 import { Muncul } from "../../utils/AnimasiHalaman";
+
+// CSS
 import "./kontak.css";
 
 const Kontak = () => {
-  const formulir = useRef();
-  const [sedangMengirim, setSedangMengirim] = useState(false);
-  const [tandaMengirim, setTandaMengirim] = useState("");
+  const formulir = useRef(); // Referensi ke form
+  const [sedangMengirim, setSedangMengirim] = useState(false); // Status pengiriman
+  const [tandaMengirim, setTandaMengirim] = useState(""); // Animasi "..."
 
   const kirimEmail = async (e) => {
     e.preventDefault();
@@ -21,22 +26,25 @@ const Kontak = () => {
       try {
         setSedangMengirim(true);
         setTandaMengirim(".");
+
         // Kirim formulir ke EmailJS
         await emailjs.sendForm(
-          "service_mssaa3g", // Ganti dengan Service ID kamu
-          "template_hdjmn08", // Ganti dengan Template ID kamu
-          formulir.current, // Formulir yang ingin dikirim
-          "LE4nxpzu046TvFJJo" // Public Key kamu
+          "service_mssaa3g", // Ganti dengan Service ID Anda
+          "template_hdjmn08", // Ganti dengan Template ID Anda
+          formulir.current,
+          "LE4nxpzu046TvFJJo" // Ganti dengan Public Key Anda
         );
+
         // Tampilkan pesan sukses
         toast.success("Pesan berhasil terkirim!", {
-          position: toast.POSITION ? toast.POSITION.TOP_CENTER : "top-center",
+          position: "top-center",
         });
         e.target.reset(); // Reset formulir setelah pengiriman
       } catch (error) {
         // Tampilkan pesan error jika pengiriman gagal
+        console.error("EmailJS Error:", error);
         toast.error("Oops! Terjadi kesalahan. Mohon coba lagi nanti.", {
-          position: toast.POSITION ? toast.POSITION.TOP_CENTER : "top-center",
+          position: "top-center",
         });
       } finally {
         setSedangMengirim(false);
@@ -46,6 +54,7 @@ const Kontak = () => {
   };
 
   useEffect(() => {
+    // Animasi tanda "..." saat sedang mengirim
     const intervalId = setInterval(() => {
       setTandaMengirim((prev) => (prev === "..." ? "" : prev + "."));
     }, 500);
@@ -56,19 +65,26 @@ const Kontak = () => {
   }, [tandaMengirim]);
 
   const formulirValidasi = () => {
-    const nama = formulir.current.nama.value.trim();
-    const email = formulir.current.email.value.trim();
-    const proyek = formulir.current.proyek.value.trim();
-    const formulirApakahValid = nama !== "" && email !== "" && proyek !== "";
-    if (!formulirApakahValid) {
-      toast.error(
-        "Oops! Terjadi kesalahan. Mohon mengisi semua formulir yang tersedia.",
-        {
-          position: toast.POSITION ? toast.POSITION.TOP_CENTER : "top-center",
-        }
-      );
+    const nama = formulir.current.from_name.value.trim();
+    const email = formulir.current.from_email.value.trim();
+    const message = formulir.current.message.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!nama || !email || !message) {
+      toast.error("Harap isi semua bidang!", {
+        position: "top-center",
+      });
+      return false;
     }
-    return formulirApakahValid;
+
+    if (!emailRegex.test(email)) {
+      toast.error("Format email tidak valid!", {
+        position: "top-center",
+      });
+      return false;
+    }
+
+    return true;
   };
 
   return (
@@ -120,7 +136,7 @@ const Kontak = () => {
               <h3 className="judul__kartu-kontak">Whatsapp</h3>
               <span className="data__kartu-kontak">+62 853-6387-2317</span>
               <a
-                href="https://api.whatsapp.com/send?phone=+6285363972317&text=Halo, Saya ingin bertanya tentang proyek anda."
+                href="https://api.whatsapp.com/send?phone=+6285363872317&text=Halo, Saya ingin bertanya tentang proyek anda."
                 className="tombol__kontak"
               >
                 Tuliskan Pesan{" "}
@@ -136,7 +152,7 @@ const Kontak = () => {
               <label className="form__kontak-label">Nama</label>
               <input
                 type="text"
-                name="nama"
+                name="from_name"
                 className="form__kontak-input"
                 placeholder="Masukkan Nama Anda"
                 autoComplete="off"
@@ -146,20 +162,20 @@ const Kontak = () => {
               <label className="form__kontak-label">Email</label>
               <input
                 type="email"
-                name="email"
+                name="from_email"
                 className="form__kontak-input"
                 placeholder="Masukkan Email Anda"
                 autoComplete="off"
               />
             </div>
             <div className="form__kontak-div form__kontak-area">
-              <label className="form__kontak-label">Proyek</label>
+              <label className="form__kontak-label">Pesan</label>
               <textarea
-                name="proyek"
+                name="message"
                 cols="30"
                 rows="10"
                 className="form__kontak-input"
-                placeholder="Tuliskan Proyek Anda"
+                placeholder="Tuliskan Pesan Anda"
                 autoComplete="off"
               ></textarea>
             </div>
