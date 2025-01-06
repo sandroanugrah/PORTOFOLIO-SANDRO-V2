@@ -1,0 +1,78 @@
+.wadah__keahlian {
+  grid-template-columns: repeat(1, 350px);
+  column-gap: 3rem;
+  justify-content: center;
+}
+
+.konten__keahlian {
+  background-color: var(--warna-container);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 4rem;
+  border-radius: 1.25rem;
+}
+
+.judul__keahlian {
+  font-size: var(--ukuran-font-normal);
+  font-weight: var(--font-medium);
+  text-align: center;
+  margin-bottom: var(--mb-1-5);
+}
+
+.kotak__keahlian {
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+
+.kelompok__keahlian {
+  display: grid;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+
+.data__keahlian {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.keahlian .bx-badge-check {
+  font-size: 1rem;
+  color: #ffc0ad;
+}
+
+.nama__keahlian {
+  font-size: var(--ukuran-font-normal);
+  font-weight: var(--font-medium);
+  line-height: 18px;
+}
+
+.tingkat__keahlian {
+  font-size: var(--ukuran-font-kecil-sekali);
+}
+
+@media screen and (max-width: 992px) {
+  .wadah__keahlian {
+    grid-template-columns: max-content;
+    row-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wadah__keahlian {
+    grid-template-columns: 1fr;
+  }
+
+  .konten__keahlian {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .kotak__keahlian {
+    column-gap: 1.25rem;
+  }
+
+  .nama__keahlian {
+    font-size: var(--ukuran-font-kecil);
+  }
+}
