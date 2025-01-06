@@ -88,3 +88,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.unduh-cv {
+  display: flex;
+  gap: 10px;
+}
