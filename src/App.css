@@ -27,12 +27,12 @@
   /*Mode warna HSL(hue, saturation, lightness)*/
   --hue: 0;
   --sat: 0%;
-  --warna-judul: #fffffe;
-  --warna-judul2: #fffffe;
+  --warna-judul: #8c7851;
+  --warna-judul2: #f25042;
   --warna-judul-gelap: hsl(var(--hue), var(--sat), 0%);
-  --warna-teks: #fff3ec;
-  --warna-tubuh: #271c19;
-  --warna-container: #55423d;
+  --warna-teks: #716040;
+  --warna-tubuh: #f9f4ef;
+  --warna-container: #020826;
 
   /*========== Font dan tipografi ==========*/
   --font-tubuh: "Poppins", sans-serif;
