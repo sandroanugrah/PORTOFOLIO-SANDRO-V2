@@ -21,7 +21,7 @@
 }
 
 .sosial__beranda-ikon:hover {
-  color: var(--warna-judul-gelap);
+  color: #7e99a3;
 }
 
 .judul__beranda {
@@ -119,7 +119,7 @@
 
 .gulir__beranda:hover .panah__gulir-beranda {
   transform: translateY(-00.25rem);
-  color: var(--warna-judul-gelap);
+  color: #7e99a3;
 }
 
 @media screen and (max-width: 992px) {
