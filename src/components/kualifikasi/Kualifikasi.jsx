@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { Muncul } from "../../utils/AnimasiHalaman";
 import "./kualifikasi.css";
 import sandroImage from "../../assets/sertifikat.jpg";
+import sertiSandro2 from "../../assets/serti2.png";
+import sertiSandro3 from "../../assets/serti3.png";
 
 const Kualifikasi = () => {
   const [aktif, setAktif] = useState(1);
@@ -259,9 +261,79 @@ const Kualifikasi = () => {
               </div>
               <div>
                 <h3 className="judul__kualifikasi">Penghargaan 2</h3>
-                <span className="subjudul__kualifikasi">Menyusul....</span>
+                <span className="subjudul__kualifikasi">Klik untuk detail</span>
                 <div className="kalender__kualifikasi">
-                  <i className="uil uil-calendar-alt"> </i>
+                  <i className="uil uil-calendar-alt">2025</i>
+                </div>
+                <img
+                  src={sertiSandro2}
+                  alt="Penghargaan 2"
+                  className="gambar__penghargaan"
+                  onClick={handleImageClick}
+                />
+              </div>
+
+              {isModalOpen && (
+                <div className="modal" onClick={closeModal}>
+                  <span className="close" onClick={closeModal}>
+                    &times;
+                  </span>
+                  <img
+                    className="modal-content"
+                    src={sertiSandro2}
+                    alt="Zoomed"
+                  />
+                </div>
+              )}
+            </div>
+
+            <div className="data__kualifikasi">
+              <div>
+                <h3 className="judul__kualifikasi">Penghargaan 3</h3>
+                <span className="subjudul__kualifikasi">Klik untuk detail</span>
+                <div className="kalender__kualifikasi">
+                  <i className="uil uil-calendar-alt"> 2025</i>
+                </div>
+                <img
+                  src={sertiSandro3}
+                  alt="Penghargaan 1"
+                  className="gambar__penghargaan"
+                  onClick={handleImageClick}
+                />
+              </div>
+              <div>
+                <span className="pengadu__kualifikasi"></span>
+                <span className="garis__kualifikasi"></span>{" "}
+              </div>
+              {isModalOpen && (
+                <div className="modal" onClick={closeModal}>
+                  <span className="close" onClick={closeModal}>
+                    &times;
+                  </span>
+                  <img
+                    className="modal-content"
+                    src={sertiSandro3}
+                    alt="Zoomed"
+                  />
+                </div>
+              )}
+            </div>
+
+            <div className="data__kualifikasi">
+              <div></div>
+              <div>
+                <span className="pengadu__kualifikasi"></span>
+                <span className="garis__kualifikasi"></span>
+              </div>
+              <div>
+                <h3 className="judul__kualifikasi">Penghargaan 4</h3>
+                <span className="subjudul__kualifikasi">Menyusul...</span>
+                <div className="kalender__kualifikasi">
+                  <i className="uil uil-calendar-alt">2026</i>
+                </div>
+
+                <div className="gambar__placeholder">
+                  <span>Belum ada gambar</span>
                 </div>
               </div>
             </div>

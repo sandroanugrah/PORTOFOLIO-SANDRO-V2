@@ -4,7 +4,7 @@ import React from "react";
 const Backend = () => {
   return (
     <div className="konten__keahlian">
-      <h3 className="judul__keahlian">Backend</h3>
+      <h3 className="judul__keahlian">Server Side</h3>
       <div className="kotak__keahlian">
         <div className="kelompok__keahlian">
           <div className="data__keahlian">

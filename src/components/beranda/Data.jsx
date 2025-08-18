@@ -85,11 +85,11 @@ const Data = () => {
         />
       </h3>
       <p className="deskripsi__beranda">
-        Saya Sandro Anugrah Tambunan, seorang mahasiswa sekaligus backend
-        developer yang berfokus pada pengembangan sistem dan arsitektur aplikasi
-        yang andal, efisien, dan aman. Dengan dedikasi pada inovasi teknologi,
-        saya memiliki keahlian dalam membangun backend yang kuat untuk mendukung
-        berbagai kebutuhan aplikasi modern.
+        Saya Sandro Anugrah Tambunan, seorang mahasiswa sekaligus server-side
+        developer yang berfokus pada pengembangan logika bisnis dan pengelolaan
+        data di balik layar. Dengan perhatian pada efisiensi, keamanan, dan
+        keandalan sistem, saya membangun fondasi aplikasi yang mampu mendukung
+        kebutuhan modern serta mendukung pengalaman pengguna yang optimal
       </p>
 
       <a href="#kontak" className="tombol tombol--flex">

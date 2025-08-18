@@ -50,12 +50,14 @@ const Tentang = () => {
         >
           <Info />
           <p className="deskripsi__tentang">
-            Halo, saya Sandro Anugrah Tambunan, seorang backend developer dengan
-            pengalaman 1,5 tahun. Saya mahir dalam Node.js, Firebase, React.js,
-            dan Next.js. Saat ini, saya sedang mempelajari Three.js dan
-            TypeScript, serta bertekad untuk semakin menguasainya. Saya juga
-            memiliki pengetahuan dalam MySQL, SQL, MongoDB, dan Java. Siap
-            menerima dukungan dari Anda selama aktif 1/24 jam.
+            Halo, saya Sandro Anugrah Tambunan, seorang server-side developer
+            dengan pengalaman 1,5 tahun. Saya memiliki keahlian dalam Node.js,
+            Firebase, React.js, dan Next.js. Saat ini saya sedang mendalami
+            Three.js dan TypeScript untuk memperluas kemampuan pengembangan
+            aplikasi modern. Selain itu, saya juga memiliki pengetahuan dalam
+            MySQL, SQL, MongoDB, dan Java. Saya terbuka untuk kolaborasi dan
+            dukungan, serta siap memberikan kontribusi terbaik kapan pun
+            dibutuhkan
           </p>
           <div className="unduh-cv">
             <a
