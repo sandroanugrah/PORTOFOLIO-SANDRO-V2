@@ -72,11 +72,13 @@ const Data = () => {
           sequence={[
             "Web Developer Backend",
             2000,
-            "Backend Developer",
+            "Server Side Developer",
             2000,
             "Mahasiswa Unjani Informatika",
             2000,
             "Anak Siappudan (Bontot)",
+            2000,
+            "Tidak Ada Yang Spesial Disinii !!!!",
             2000,
           ]}
           wrapper="span"
