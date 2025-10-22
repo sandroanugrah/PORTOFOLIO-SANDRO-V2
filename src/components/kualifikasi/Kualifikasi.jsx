@@ -6,8 +6,9 @@ import { motion } from "framer-motion";
 import { Muncul } from "../../utils/AnimasiHalaman";
 import "./kualifikasi.css";
 import sandroImage from "../../assets/sertifikat.jpg";
-import sertiSandro2 from "../../assets/serti2.png";
-import sertiSandro3 from "../../assets/serti3.png";
+import sertiSandro2 from "../../assets/meteorologi.jpg";
+import sertiSandro3 from "../../assets/klimatologi.jpg";
+import sertiSandro4 from "../../assets/geofisika.jpg";
 
 const Kualifikasi = () => {
   const [aktif, setAktif] = useState(1);
@@ -16,14 +17,8 @@ const Kualifikasi = () => {
   };
 
   const [isModalOpen, setModalOpen] = useState(false);
-
-  const handleImageClick = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  const handleImageClick = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
 
   return (
     <section className="kualifikasi bagian" id="kualifikasi">
@@ -36,6 +31,7 @@ const Kualifikasi = () => {
       >
         Kualifikasi
       </motion.h2>
+
       <motion.span
         variants={Muncul("bawah", 0.3)}
         initial="hilang"
@@ -64,6 +60,7 @@ const Kualifikasi = () => {
           >
             <i className="uil uil-graduation-cap kualifikasi__ikon"></i> Edukasi
           </div>
+
           <div
             className={
               aktif === 2
@@ -75,6 +72,7 @@ const Kualifikasi = () => {
             <i className="uil uil-briefcase-alt kualifikasi__ikon"></i>{" "}
             Pengalaman
           </div>
+
           <div
             className={
               aktif === 3
@@ -86,7 +84,9 @@ const Kualifikasi = () => {
             <i className="uil uil-trophy kualifikasi__ikon"></i> Penghargaan
           </div>
         </div>
+
         <div className="bagian__kualifikasi">
+          {/* EDUKASI */}
           <div
             className={
               aktif === 1
@@ -96,7 +96,7 @@ const Kualifikasi = () => {
           >
             <div className="data__kualifikasi">
               <div>
-                <h3 className="judul__kualifikasi"> Mahasiswa-IF</h3>
+                <h3 className="judul__kualifikasi">Mahasiswa-IF</h3>
                 <span className="subjudul__kualifikasi">Unjani</span>
                 <div className="kalender__kualifikasi">
                   <i className="uil uil-calendar-alt"> 2022 - Sekarang</i>
@@ -157,6 +157,7 @@ const Kualifikasi = () => {
             </div>
           </div>
 
+          {/* PENGALAMAN */}
           <div
             className={
               aktif === 2
@@ -214,6 +215,7 @@ const Kualifikasi = () => {
             </div>
           </div>
 
+          {/* PENGHARGAAN */}
           <div
             className={
               aktif === 3
@@ -221,6 +223,7 @@ const Kualifikasi = () => {
                 : "konten__kualifikasi"
             }
           >
+            {/* Penghargaan 1 */}
             <div className="data__kualifikasi">
               <div>
                 <h3 className="judul__kualifikasi">Penghargaan 1</h3>
@@ -237,8 +240,9 @@ const Kualifikasi = () => {
               </div>
               <div>
                 <span className="pengadu__kualifikasi"></span>
-                <span className="garis__kualifikasi"></span>{" "}
+                <span className="garis__kualifikasi"></span>
               </div>
+
               {isModalOpen && (
                 <div className="modal" onClick={closeModal}>
                   <span className="close" onClick={closeModal}>
@@ -253,6 +257,7 @@ const Kualifikasi = () => {
               )}
             </div>
 
+            {/* Penghargaan 2 */}
             <div className="data__kualifikasi">
               <div></div>
               <div>
@@ -287,6 +292,7 @@ const Kualifikasi = () => {
               )}
             </div>
 
+            {/* Penghargaan 3 */}
             <div className="data__kualifikasi">
               <div>
                 <h3 className="judul__kualifikasi">Penghargaan 3</h3>
@@ -296,15 +302,16 @@ const Kualifikasi = () => {
                 </div>
                 <img
                   src={sertiSandro3}
-                  alt="Penghargaan 1"
+                  alt="Penghargaan 3"
                   className="gambar__penghargaan"
                   onClick={handleImageClick}
                 />
               </div>
               <div>
                 <span className="pengadu__kualifikasi"></span>
-                <span className="garis__kualifikasi"></span>{" "}
+                <span className="garis__kualifikasi"></span>
               </div>
+
               {isModalOpen && (
                 <div className="modal" onClick={closeModal}>
                   <span className="close" onClick={closeModal}>
@@ -319,6 +326,7 @@ const Kualifikasi = () => {
               )}
             </div>
 
+            {/* Penghargaan 4 */}
             <div className="data__kualifikasi">
               <div></div>
               <div>
@@ -327,6 +335,36 @@ const Kualifikasi = () => {
               </div>
               <div>
                 <h3 className="judul__kualifikasi">Penghargaan 4</h3>
+                <span className="subjudul__kualifikasi">Klik untuk detail</span>
+                <div className="kalender__kualifikasi">
+                  <i className="uil uil-calendar-alt">2025</i>
+                </div>
+                <img
+                  src={sertiSandro4}
+                  alt="Penghargaan 4"
+                  className="gambar__penghargaan"
+                  onClick={handleImageClick}
+                />
+              </div>
+
+              {isModalOpen && (
+                <div className="modal" onClick={closeModal}>
+                  <span className="close" onClick={closeModal}>
+                    &times;
+                  </span>
+                  <img
+                    className="modal-content"
+                    src={sertiSandro4}
+                    alt="Zoomed"
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Penghargaan 5 */}
+            <div className="data__kualifikasi">
+              <div>
+                <h3 className="judul__kualifikasi">Penghargaan 5</h3>
                 <span className="subjudul__kualifikasi">Menyusul...</span>
                 <div className="kalender__kualifikasi">
                   <i className="uil uil-calendar-alt">2026</i>
@@ -335,6 +373,10 @@ const Kualifikasi = () => {
                 <div className="gambar__placeholder">
                   <span>Belum ada gambar</span>
                 </div>
+              </div>
+              <div>
+                <span className="pengadu__kualifikasi"></span>
+                <span className="garis__kualifikasi"></span>
               </div>
             </div>
           </div>
