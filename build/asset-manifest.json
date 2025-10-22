@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.68c3e893.css",
+    "main.js": "/static/js/main.a3c9c507.js",
+    "static/media/ndaru.png": "/static/media/ndaru.ec9405c3cb829f4fc9b2.png",
+    "static/media/fsi.png": "/static/media/fsi.8e389ab28217fa4bb11e.png",
+    "static/media/a.jpg": "/static/media/a.499688310125a1129e93.jpg",
+    "static/media/ptsp.png": "/static/media/ptsp.88895578fbf74db92b1e.png",
+    "static/media/sandro1.jpg": "/static/media/sandro1.7f6e5a24aa40b509c332.jpg",
+    "static/media/sarjana.png": "/static/media/sarjana.b1d63f4ed5f82d9ea75d.png",
+    "static/media/meteorologi.jpg": "/static/media/meteorologi.ad684360b26c467ccdc7.jpg",
+    "static/media/klimatologi.jpg": "/static/media/klimatologi.29c6098ee8234ced222b.jpg",
+    "static/media/geofisika.jpg": "/static/media/geofisika.c7ec6a63af756bd84c28.jpg",
+    "static/media/sertifikat.jpg": "/static/media/sertifikat.6d44c0d0ebe64825c776.jpg",
+    "static/media/basarnas.png": "/static/media/basarnas.8a857204a54e314c0ad9.png",
+    "static/media/testimonial2.jpg": "/static/media/testimonial2.32a244f1025ed0db151c.jpg",
+    "index.html": "/index.html",
+    "main.68c3e893.css.map": "/static/css/main.68c3e893.css.map",
+    "main.a3c9c507.js.map": "/static/js/main.a3c9c507.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68c3e893.css",
+    "static/js/main.a3c9c507.js"
+  ]
+}
