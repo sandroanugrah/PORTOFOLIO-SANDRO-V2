@@ -134,9 +134,9 @@ const Kontak = () => {
             <div className="kartu__kontak">
               <i className="bx bxl-whatsapp ikon__kartu-kontak"></i>
               <h3 className="judul__kartu-kontak">Whatsapp</h3>
-              <span className="data__kartu-kontak">+62 853-6387-2317</span>
+              <span className="data__kartu-kontak">+62 813-1825-8037</span>
               <a
-                href="https://api.whatsapp.com/send?phone=+6285363872317&text=Halo, Saya ingin bertanya tentang proyek anda."
+                href="https://api.whatsapp.com/send?phone=+6281318258037&text=Halo, Saya ingin bertanya tentang proyek anda."
                 className="tombol__kontak"
               >
                 Tuliskan Pesan{" "}
